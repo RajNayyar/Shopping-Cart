@@ -1,4 +1,4 @@
-using System;
+Using System;
 
 namespace temp {
 	//ITEMS
@@ -10,9 +10,9 @@ namespace temp {
 
     //CART
     interface IShoppingCart {
-    	public void AddToCart(item itemObj, int NoOfItems);
-    	public void RemoveFromCart(item itemObj, int NoOfItems);
-    	public void ShowCart();
+    	void AddToCart(item itemObj, int NoOfItems);
+    	void RemoveFromCart(item itemObj, int NoOfItems);
+    	void ShowCart();
     }
     class Cart : IShoppingCart{
     	public int totalItemsInCart;
@@ -25,7 +25,7 @@ namespace temp {
 
     //CHECKOUT
     interface ICheckout{
-    	public bool ProceedToCheckOut(bool IsCartEmpty);
+    	bool ProceedToCheckOut(bool IsCartEmpty);
     }
 	class Checkout : ICheckout{
 		public bool ProceedToCheckOut(bool IsCartEmpty);
@@ -45,7 +45,7 @@ namespace temp {
 
 	//ORDER
 	interface IOrder{
-		public bool OrderConfirmation(bool IfPaymentComplete);
+		bool OrderConfirmation(bool IfPaymentComplete);
 	}
     class Order {
     	int OrderId;
